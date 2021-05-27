@@ -23,7 +23,7 @@ For example
 
 ## Architecture
 
-There are two projects in the solution, a test project (making use of the [NUnit](https://nunit.org/) package) and a class library `Raindrops`. The class library contains a single static class `Raindrops` containing a single static method `GetFactorResult` which utilises a [StringBuilder](https://docs.microsoft.com/en-us/dotnet/standard/base-types/stringbuilder). The test project contains a single class `GetFactorResultTests` composed of unit test methods for the `GetFactorResult` method. 
+There are two projects in the solution, a test project (making use of the [NUnit](https://nunit.org/) , NUnit3TestAdapter, and Microsoft.NET.Test.Sdk packages) and a class library `Raindrops`. The class library contains a single static class `Raindrops` containing a single static method `GetFactorResult` which utilises a [StringBuilder](https://docs.microsoft.com/en-us/dotnet/standard/base-types/stringbuilder). The test project contains a single class `GetFactorResultTests` composed of unit test methods for the `GetFactorResult` method. 
 
 ## Testing
 
