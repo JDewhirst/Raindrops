@@ -21,3 +21,32 @@ For example
 - 34 has four factors: 1, 2, 17, and 34
   - `n` = 34 returns the string `34`
 
+## Architecture
+
+There are two projects in the solution, a test project (making use of the [NUnit](https://nunit.org/) package) and a class library `Raindrops`. The class library contains a single static class `Raindrops` containing a single static method `GetFactorResult` which utilises a [StringBuilder](https://docs.microsoft.com/en-us/dotnet/standard/base-types/stringbuilder). The test project contains a single class `GetFactorResultTests` composed of unit test methods for the `GetFactorResult` method. 
+
+## Testing
+
+The structure of the unit tests is as follows. All unit tests are contained in the `GetFactorResultTests` class. A typical unit test follows a structure like so:
+
+```c#
+[TestCase(3)]
+[TestCase(36)]
+[TestCase(-3)]
+[TestCase(-36)]
+public void GetFactorResult_NumberHasAFactorOf3_ReturnsPling(int input)
+{
+    var result = Raindrops.Raindrops.GetFactorResult(input);
+    Assert.That(result, Is.EqualTo("Pling"));
+}
+```
+
+Where the `[TestCase]` attributes parameterise the tests so that multiple values can be tested against by a single test method.
+
+Test method names follow a [convention recommend by Microsoft](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices#naming-your-tests), in which they are split into three parts.
+
+1. The name of the method being tested.
+2. The scenario under which it's being tested.
+3. The expected behaviour when the scenario is invoked.
+
+Within `RaindropsLibraryTests.cs` an Arrange-Act-Assert (AAA) pattern has been followed to standardise the tests. Since the system being tested is a static class with a static method the Arrange step is omitted.
