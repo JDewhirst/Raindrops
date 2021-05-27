@@ -35,7 +35,44 @@ namespace RaindropsLibraryTests
             Assert.That(result, Is.EqualTo("Plong"));
         }
 
+        [TestCase(15)]
+        [TestCase(30)]
+        [TestCase(-15)]
+        [TestCase(-30)]
+        public void GetFactorResult_NumberHasAFactorOf3And5_ReturnsPlingPlang(int input)
+        {
+            var result = Raindrops.Raindrops.GetFactorResult(input);
+            Assert.That(result, Is.EqualTo("PlingPlang"));
+        }
 
-        
+        [TestCase(21)]
+        [TestCase(63)]
+        [TestCase(-21)]
+        [TestCase(-63)]
+        public void GetFactorResult_NumberHasAFactorOf3And7_ReturnsPlingPlong(int input)
+        {
+            var result = Raindrops.Raindrops.GetFactorResult(input);
+            Assert.That(result, Is.EqualTo("PlingPlong"));
+        }
+
+        [TestCase(35)]
+        [TestCase(70)]
+        [TestCase(-35)]
+        [TestCase(-70)]
+        public void GetFactorResult_NumberHasAFactorOf5And7_ReturnsPlangPlong(int input)
+        {
+            var result = Raindrops.Raindrops.GetFactorResult(input);
+            Assert.That(result, Is.EqualTo("PlangPlong"));
+        }
+
+        [TestCase(105)]
+        [TestCase(210)]
+        [TestCase(-105)]
+        [TestCase(-210)]
+        public void GetFactorResult_NumberHasAFactorOf3And5And7_ReturnsPlingPlangPlong(int input)
+        {
+            var result = Raindrops.Raindrops.GetFactorResult(input);
+            Assert.That(result, Is.EqualTo("PlangPlong"));
+        }
     }
 }
