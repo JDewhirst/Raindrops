@@ -2,7 +2,7 @@
 
 namespace Raindrops
 {
-    public class RaindropsClassLibrary
+    public class RaindropsClass
     {
         public string Raindrops(int n)
         {
