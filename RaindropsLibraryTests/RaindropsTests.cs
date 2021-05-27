@@ -74,5 +74,15 @@ namespace RaindropsLibraryTests
             var result = Raindrops.Raindrops.GetFactorResult(input);
             Assert.That(result, Is.EqualTo("PlangPlong"));
         }
+
+        [TestCase(1, "1")]
+        [TestCase(-1, "-1")]
+        [TestCase(34, "34")]
+        [TestCase(-34, "-34")]
+        public void GetFactorResult_NumberDoesNotHaveAFactorOf3Or5Or7_ReturnsNumber(int input, string expected)
+        {
+            var result = Raindrops.Raindrops.GetFactorResult(input);
+            Assert.That(result, Is.EqualTo(expected));
+        }
     }
 }
