@@ -2,9 +2,9 @@
 
 namespace Raindrops
 {
-    public class RaindropsClass
+    public static class Raindrops
     {
-        public string Raindrops(int n)
+        public static string GetFactorResult(int n)
         {
             throw new NotImplementedException();
         }
