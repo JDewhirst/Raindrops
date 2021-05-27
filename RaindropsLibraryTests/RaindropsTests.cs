@@ -73,7 +73,7 @@ namespace RaindropsLibraryTests
         public void GetFactorResult_NumberHasAFactorOf3And5And7_ReturnsPlingPlangPlong(int input)
         {
             var result = Raindrops.Raindrops.GetFactorResult(input);
-            Assert.That(result, Is.EqualTo("PlangPlong"));
+            Assert.That(result, Is.EqualTo("PlingPlangPlong"));
         }
 
         [TestCase(1, "1")]
