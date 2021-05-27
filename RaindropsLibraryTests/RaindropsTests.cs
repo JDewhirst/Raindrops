@@ -15,6 +15,27 @@ namespace RaindropsLibraryTests
             Assert.That(result, Is.EqualTo("Pling"));
         }
 
+        [TestCase(5)]
+        [TestCase(25)]
+        [TestCase(-5)]
+        [TestCase(-25)]
+        public void GetFactorResult_NumberHasAFactorOf5_ReturnsPlang(int input)
+        {
+            var result = Raindrops.Raindrops.GetFactorResult(input);
+            Assert.That(result, Is.EqualTo("Plang"));
+        }
 
+        [TestCase(7)]
+        [TestCase(28)]
+        [TestCase(-7)]
+        [TestCase(-28)]
+        public void GetFactorResult_NumberHasAFactorOf7_ReturnsPlong(int input)
+        {
+            var result = Raindrops.Raindrops.GetFactorResult(input);
+            Assert.That(result, Is.EqualTo("Plong"));
+        }
+
+
+        
     }
 }
