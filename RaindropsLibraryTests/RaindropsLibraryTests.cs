@@ -1,9 +1,8 @@
 using NUnit.Framework;
-using Raindrops;
 
 namespace RaindropsLibraryTests
 {
-    public class Tests
+    public class GetFactorResultTests
     {
         [TestCase(3)]
         [TestCase(36)]
