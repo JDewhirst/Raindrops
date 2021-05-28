@@ -50,3 +50,16 @@ Test method names follow a [convention recommend by Microsoft](https://docs.micr
 3. The expected behaviour when the scenario is invoked.
 
 Within `RaindropsLibraryTests.cs` an Arrange-Act-Assert (AAA) pattern has been followed to standardise the tests. Since the system being tested is a static class with a static method the Arrange step is omitted.
+
+### Tests Scenarios
+
+* Test scenario | Expected result
+* 3 is a factor of `n` | Returns `Pling`
+* 5 is a factor of `n` | Returns `Plang`
+* 7 is a factor of `n` | Returns `Plong`
+* 3 and 5 are factors of `n` | Returns `PlingPlang`
+* 3 and 7 are factors of `n` | Returns `PlingPlong`
+* 5 and 7 are factors of `n`| Returns `PlangPlong`
+* 3, 5, and 7 are factors of `n` | Returns `PlingPlangPlong`
+* 3, 5, and 7 are not factors of `n` | Returns the digits of `n`
+
